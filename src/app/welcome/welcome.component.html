@@ -3,5 +3,14 @@
 <div class="container">
   Welcome {{name}}. <br>
   You can manage your todos <a routerLink="/todos">here</a>
+</div>
 
+<div class="container">
+  Click here to get a customized welcome message.
+  <button class="btn btn-success btn-block col-sm-4" (click)="getWelcomeMessage()">Get Welcome Message</button>
+  <button class="btn btn-success btn-block col-sm-6" (click)="getWelcomeMessageWithParam()">Welcome Message with param</button>
+</div>
+<div class="container" *ngIf="welMsg">
+  <h2>Your customized Welcome Message</h2>
+  {{welMsg}}
 </div>
